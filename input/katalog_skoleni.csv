@@ -1,0 +1,11 @@
+kod,nazev,platnost_mesicu,povinne_pro,poznamka
+BOZP-Z,BOZP – základní školení,24,VSICHNI,
+POZ-OCH,Požární ochrana,24,VSICHNI,
+GDPR,Ochrana osobních údajů,36,VSICHNI,
+KYBER,Kybernetická bezpečnost,12,VSICHNI,
+PRV-POM,První pomoc,36,UTVAR:Laboratoře;Správa budov;Knihovna,
+RIDIC,Řidiči referenti,12,POZICE:Řidič,
+LAB-BEZ,Bezpečná práce v laboratoři,24,UTVAR:Laboratoře,
+ZDVIH,Obsluha zdvihacích zařízení,2 roky,POZICE:Technik údržby,
+LEAD,Základy vedení lidí,0,POZICE:Vedoucí,
+ANGL,Anglický jazyk – kurz,,NEPOVINNE,
