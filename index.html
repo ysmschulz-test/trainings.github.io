@@ -3,10 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Sample Page</title>
+    <title>Multi-Dataset Loading Matrix</title>
+    <!-- Include Papa Parse and Tailwind CSS -->
+    <script src="https://cloudflare.com"></script>
+    <script src="https://jsdelivr.net"></script>
 </head>
-<body>
-    <h1>Hello World!</h1>
-    <p>My GitHub Pages website is officially working.</p>
+<body class="bg-slate-900 text-white p-8 font-sans">
+
+    <div class="max-w-xl mx-auto text-center mt-12">
+        <h1 class="text-2xl font-bold mb-4">Central Data Matrix</h1>
+        <div id="statusBox" class="p-6 bg-slate-800 border border-slate-700 rounded-lg text-sm font-mono text-amber-400 text-left space-y-2">
+            <div>⏳ Connecting to data warehouse...</div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables to store your separate datasets
+        let DATASET_EMPLOYEES = [];
+        let DATASET_TRAININGS = [];
+        let DATASET_TERMS = [];
+        let DATASET_PASSED = [];
+
+        // Helper function that wraps Papa.parse into a modern, clean JavaScript Promise
+        function fetchAndParseCSV(filePath) {
+            return new Promise((resolve, reject) => {
+                Papa.parse(filePath, {
+                    download: true,
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (results) => resolve(results.data),
+                    error: (error) => reject({ file: filePath, message: error.message })
+                });
+            });
+        }
+
+        // Master orchestrator function to load everything simultaneously
+        async function loadAllDatasets() {
+            const statusBox = document.getElementById('statusBox');
+            
+            try {
+                // Fire off all three HTTP network requests at the exact same time
+                const [employeesData, trainingsData, termsData, passedData] = await Promise.all([
+                    fetchAndParseCSV('input/zamestnanci.csv'),
+                    fetchAndParseCSV('input/katalog_skoleni.csv'),
+                    fetchAndParseCSV('input/terminy_skoleni.csv'),
+                    fetchAndParseCSV('input/absolvovana_skoleni.csv')
+                ]);
+
+                // Save data to global scopes once they pass validation
+                DATASET_EMPLOYEES = employeesData;
+                DATASET_TRAININGS = trainingsData;
+                DATASET_TERMS = termsData;
+                DATASET_PASSED = passedData;
+
+                // Update the user interface with distinct record tallies
+                statusBox.classList.remove('text-amber-400');
+                statusBox.classList.add('text-green-400');
+                statusBox.innerHTML = `
+                    <div class="font-bold text-base border-b border-slate-700 pb-2 mb-2 text-white">✅ Core Memory Engine Ready</div>
+                    <div>• Employees Loaded: <span class="text-white">${DATASET_EMPLOYEES.length} rows</span></div>
+                    <div>• Trainings Loaded: <span class="text-white">${DATASET_TRAININGS.length} rows</span></div>
+                    <div>• Terms/Glossary Loaded: <span class="text-white">${DATASET_TERMS.length} rows</span></div>
+                    <div>• Passed terms Loaded: <span class="text-white">${DATASET_PASSED.length} rows</span></div>
+                    <div class="mt-4 pt-2 border-t border-slate-700 text-xs text-slate-400">Open your browser console (F12) to see data schemas.</div>
+                `;
+
+                // Log the loaded data matrices out to inspect structures
+                console.log("📂 Employees Matrix:", DATASET_EMPLOYEES);
+                console.log("📂 Trainings Matrix:", DATASET_TRAININGS);
+                console.log("📂 Terms Matrix:", DATASET_TERMS);
+                console.log("📂 Passed Matrix:", DATASET_Passed);
+
+                // NEXT STEP: Run your custom join and transformation operations here
+                // processAndMatchRecords();
+
+            } catch (error) {
+                // Catches failure if even a single file is missing or has bad layout
+                statusBox.classList.remove('text-amber-400');
+                statusBox.classList.add('text-red-400');
+                statusBox.innerHTML = `
+                    <div class="font-bold text-base mb-2 text-white">❌ Fatal Loading Interruption</div>
+                    <div>Could not read asset: <span class="text-white">${error.file}</span></div>
+                    <div class="mt-2 text-xs">Reason: ${error.message}</div>
+                `;
+                console.error("Data matrix initialization aborted:", error);
+            }
+        }
+
+        // Boot up database fetch routines on page access
+        loadAllDatasets();
+    </script>
 </body>
 </html>
