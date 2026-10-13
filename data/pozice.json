@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "nazev": "Vedoucí"
+    },
+    {
+        "id": 2,
+        "nazev": "Specialista"
+    },
+    {
+        "id": 3,
+        "nazev": "Asistent"
+    },
+    {
+        "id": 4,
+        "nazev": "Referent"
+    },
+    {
+        "id": 5,
+        "nazev": "Účetní"
+    },
+    {
+        "id": 6,
+        "nazev": "Vývojář"
+    },
+    {
+        "id": 7,
+        "nazev": "Technik"
+    },
+    {
+        "id": 8,
+        "nazev": "Knihovník"
+    },
+    {
+        "id": 9,
+        "nazev": "Technik údržby"
+    },
+    {
+        "id": 10,
+        "nazev": "Řidič"
+    },
+    {
+        "id": 11,
+        "nazev": "Laborant"
+    }
+]

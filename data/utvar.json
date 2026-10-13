@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "nazev": "Studijní oddělení"
+    },
+    {
+        "id": 2,
+        "nazev": "Studijní"
+    },
+    {
+        "id": 3,
+        "nazev": "Studijni oddeleni"
+    },
+    {
+        "id": 4,
+        "nazev": "Ekonomické oddělení"
+    },
+    {
+        "id": 5,
+        "nazev": "IT oddělení"
+    },
+    {
+        "id": 6,
+        "nazev": "Knihovna"
+    },
+    {
+        "id": 7,
+        "nazev": "Správa budov"
+    },
+    {
+        "id": 8,
+        "nazev": "Sprava budov"
+    },
+    {
+        "id": 9,
+        "nazev": "SPRÁVA BUDOV"
+    },
+    {
+        "id": 10,
+        "nazev": "správa budov"
+    },
+    {
+        "id": 11,
+        "nazev": "Laboratoře"
+    },
+    {
+        "id": 12,
+        "nazev": "Laboratore"
+    },
+    {
+        "id": 13,
+        "nazev": "Personální oddělení"
+    },
+    {
+        "id": 14,
+        "nazev": "Personalni oddeleni"
+    },
+    {
+        "id": 15,
+        "nazev": "VEDENÍ"
+    },
+    {
+        "id": 16,
+        "nazev": "Vedení"
+    },
+    {
+        "id": 17,
+        "nazev": "Marketing"
+    }
+]

@@ -1,0 +1,145 @@
+{
+    "training_info": {
+        "kod": "RIDIC",
+        "nazev": "Řidiči referenti",
+        "platnost_mesicu": "12",
+        "povinne_pro": "POZICE:Řidič",
+        "poznamka": "",
+        "terminy": [
+            {
+                "datum": "2026-10-15",
+                "cas": "08:00-12:00"
+            },
+            {
+                "datum": "2026-11-19",
+                "cas": "08:00-12:00"
+            },
+            {
+                "datum": "2026-12-10",
+                "cas": "08:00-12:00"
+            }
+        ]
+    },
+    "employees": [
+        {
+            "id_zamestnance": "E0097",
+            "jmeno": "Barbora",
+            "prijmeni": "Procházková",
+            "email": "barbora.prochazkova@vzorova.example",
+            "utvar": 7,
+            "pozice": 10,
+            "vedouci_email": "nezname.jmeno@vzorova.example",
+            "datum_nastupu": "2020-10-17",
+            "datum_ukonceni": "",
+            "stav": "rodičovská",
+            "rodne_cislo": "935807/9944",
+            "poznamka": "",
+            "platnost_do": "2023-02-17"
+        },
+        {
+            "id_zamestnance": "E0098",
+            "jmeno": "Roman",
+            "prijmeni": "Dvořák",
+            "email": "roman.dvorak@vzorova.example",
+            "utvar": 7,
+            "pozice": 10,
+            "vedouci_email": "vladimir.mares@vzorova.example",
+            "datum_nastupu": "2024-04-26",
+            "datum_ukonceni": "",
+            "stav": "aktivní",
+            "rodne_cislo": "920717/1323",
+            "poznamka": "",
+            "platnost_do": "2027-07-15"
+        },
+        {
+            "id_zamestnance": "E0101",
+            "jmeno": "Štěpán",
+            "prijmeni": "Hájek",
+            "email": "stepan.hajek@vzorova.example",
+            "utvar": 7,
+            "pozice": 10,
+            "vedouci_email": "vladimir.mares@vzorova.example",
+            "datum_nastupu": "2009-02-06",
+            "datum_ukonceni": "",
+            "stav": "aktivní",
+            "rodne_cislo": "770320/0210",
+            "poznamka": "",
+            "platnost_do": "2026-12-03"
+        },
+        {
+            "id_zamestnance": "E0104",
+            "jmeno": "Petra",
+            "prijmeni": "Bednářová",
+            "email": "petra.bednarova@vzorova.example",
+            "utvar": 7,
+            "pozice": 10,
+            "vedouci_email": "vladimir.mares@vzorova.example",
+            "datum_nastupu": "2011-07-05",
+            "datum_ukonceni": "",
+            "stav": "aktivní",
+            "rodne_cislo": "035815/5423",
+            "poznamka": "",
+            "platnost_do": "2026-10-29"
+        },
+        {
+            "id_zamestnance": "E0106",
+            "jmeno": "Renata",
+            "prijmeni": "Bednářová",
+            "email": "renata.bednarova@vzorova.example",
+            "utvar": 10,
+            "pozice": 10,
+            "vedouci_email": "vladimir.mares@vzorova.example",
+            "datum_nastupu": "2020-10-17",
+            "datum_ukonceni": "",
+            "stav": "aktivní",
+            "rodne_cislo": "785328/5940",
+            "poznamka": "",
+            "platnost_do": "2027-07-12"
+        },
+        {
+            "id_zamestnance": "E0109",
+            "jmeno": "Milan",
+            "prijmeni": "Šebesta",
+            "email": "milan.sebesta@vzorova.example",
+            "utvar": 7,
+            "pozice": 10,
+            "vedouci_email": "vladimir.mares@vzorova.example",
+            "datum_nastupu": "2008-07-16",
+            "datum_ukonceni": "",
+            "stav": "aktivní",
+            "rodne_cislo": "670413/6995",
+            "poznamka": "",
+            "platnost_do": "2026-07-20"
+        },
+        {
+            "id_zamestnance": "E0110",
+            "jmeno": "Tomáš",
+            "prijmeni": "Dušek",
+            "email": "tomas.dusek@vzorova.example",
+            "utvar": 7,
+            "pozice": 10,
+            "vedouci_email": "vladimir.mares@vzorova.example",
+            "datum_nastupu": "2011-10-24",
+            "datum_ukonceni": "",
+            "stav": "aktivní",
+            "rodne_cislo": "641106/2426",
+            "poznamka": "",
+            "platnost_do": "2026-10-28"
+        },
+        {
+            "id_zamestnance": "E0113",
+            "jmeno": "Michaela",
+            "prijmeni": "Štěpánková",
+            "email": "michaela.stepankova@vzorova.example",
+            "utvar": 7,
+            "pozice": 10,
+            "vedouci_email": "vladimir.mares@vzorova.example",
+            "datum_nastupu": "2012-08-09",
+            "datum_ukonceni": "",
+            "stav": "aktivní",
+            "rodne_cislo": "905107/3263",
+            "poznamka": "",
+            "platnost_do": "2026-10-05"
+        }
+    ]
+}
